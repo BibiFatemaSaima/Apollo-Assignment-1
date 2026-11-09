@@ -19,3 +19,87 @@ function formatCoordinate(
 
   return `Location: ${locationName} (${latitude}, ${longitude})`;
 }
+
+function concatenateArrays<T>(...arrays: T[][]): T[] {
+  return arrays.flat();
+}
+
+
+interface Course {
+  title: string;
+  students: number;
+  isPublished: boolean;
+}
+
+function getPopularCourses(
+  courses: Course[],
+  minStudents: number
+): Course[] {
+  return courses.filter(
+    (course) =>
+      course.isPublished === true &&
+      course.students >= minStudents
+  );
+}
+
+const courses: Course[] = [
+  { title: "TypeScript Mastery", students: 120, isPublished: true },
+  { title: "Draft Course", students: 200, isPublished: false },
+  { title: "Basic HTML", students: 45, isPublished: true },
+  { title: "Next.js Pro", students: 85, isPublished: true }
+];
+
+function pluckValues<T, K extends keyof T>(
+  items: T[],
+  key: K
+): T[K][] {
+  return items.map((item) => item[key]);
+}
+
+const users = [
+  { id: 1, name: "Bibi", role: "Admin" },
+  { id: 2, name: "Fatema", role: "Editor" },
+  { id: 3, name: "Saima", role: "Subscriber" }
+];
+
+console.log(pluckValues(users, "name"));
+console.log(pluckValues(users, "id"));
+
+class Employee {
+  constructor(
+    protected name: string,
+    private baseSalary: number
+  ) {}
+
+  getDetails(): string {
+    return `Employee: ${this.name}, Base Salary: ${this.baseSalary}`;
+  }
+}
+
+class Manager extends Employee {
+  constructor(
+    name: string,
+    baseSalary: number,
+    private department: string
+  ) {
+    super(name, baseSalary);
+  }
+
+  getRoleInfo(): string {
+    return `Manager of ${this.department}: ${this.name}`;
+  }
+}
+
+const manager = new Manager("Alice", 50000, "Engineering");
+
+function validateAgeAsync(age: number): Promise<string> {
+  return new Promise((resolve, reject) => {
+    if (age >= 18) {
+      setTimeout(() => {
+        resolve("Access Granted");
+      }, 1000);
+    } else {
+      reject(new Error("Access Denied: Must be 18 or older"));
+    }
+  });
+}
