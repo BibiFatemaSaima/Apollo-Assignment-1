@@ -17,10 +17,9 @@ This repository contains my TypeScript assignment. The main goal of this assignm
 
 ## Blog Posts
 
-I have also written two blogs about important TypeScript concepts.
+1. [Type vs Interface in TypeScript](./type-vs-interface.md)
 
-1. [Type vs Interface in TypeScript](./blogs/type-vs-interface.md)
-2. [Type Narrowing in TypeScript](./blogs/type-narrowing.md)
+2. [Type Narrowing in TypeScript](./type-narrowing.md)
 
 ## Technologies Used
 
