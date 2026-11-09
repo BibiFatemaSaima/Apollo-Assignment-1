@@ -62,8 +62,6 @@ const users = [
   { id: 3, name: "Saima", role: "Subscriber" }
 ];
 
-console.log(pluckValues(users, "name"));
-console.log(pluckValues(users, "id"));
 
 class Employee {
   constructor(
