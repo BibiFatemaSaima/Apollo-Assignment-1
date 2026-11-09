@@ -1,6 +1,6 @@
-// function multiplyValue(value: number, multiplier: number = 2): number {
-//   return value * multiplier;
-// }
+function multiplyValue(value: number, multiplier: number = 2): number {
+  return value * multiplier;
+}
 
 function processInput(value: string | number | boolean): string | number {
   if (typeof value === "string") {
@@ -12,7 +12,10 @@ function processInput(value: string | number | boolean): string | number {
   }
 }
 
-console.log(processInput("  JAVASCRIPT  "));
-console.log(processInput(8));
-console.log(processInput(true));
-console.log(processInput(false));
+function formatCoordinate(
+  coordinate: readonly [number, number, string],
+): string {
+  const [latitude, longitude, locationName] = coordinate;
+
+  return `Location: ${locationName} (${latitude}, ${longitude})`;
+}
