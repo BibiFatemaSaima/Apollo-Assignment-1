@@ -2,11 +2,9 @@ Type vs Interface in TypeScript
 
 Introduction
 
-TypeScript provides two important ways to define the structure of data: "type" and "interface". Both help developers describe the shape of objects and make code easier to understand. However, they have some differences.
+TypeScript provide two important ways to define the structure of data "type" and "interface". Both help developers describe the shape of objects and make code easier to understand. However, they have some differences.
 What is Interface?
-
 An interface is mainly used to define the structure of an object. It describes which properties and types an object should have.
-
 Example:
 interface Student {
 name: string;
@@ -18,7 +16,7 @@ name: "Saima",
 age: 25
 };
 
-Here, the "Student" interface ensures that the object has a string "name" and a number "age".
+Here, the "Student" interface ensure that the object has a string "name" and a number "age".
 
 Interfaces can also be extended using the "extends" keyword.
 
@@ -42,7 +40,7 @@ email: string;
 
 type Status = "active" | "inactive";
 
-Unlike interfaces, type aliases can easily define union and intersection types.
+Unlike interfaces, type alieses can easily define union and intersection types.
 
 Key Differences
 

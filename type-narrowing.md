@@ -2,11 +2,11 @@ Type Narrowing in TypeScript
 
 Introduction
 
-TypeScript is a strongly typed programming language that helps developers write safer code. Sometimes, a variable can have more than one possible type. Type narrowing helps TypeScript identify the specific type of a value before using it.
+TypeScript is a strongly type programming language that helps developers write safer code. Sometimes, a variable can have more than one possible type. Type narrowing helps TypeScript identify the specifics type of a value before using it.
 
 What is Type Narrowing?
 
-Type narrowing is the process of reducing a variable's possible types within a particular block of code. We can use conditions and JavaScript operators to check the actual type of a value.
+Type narrowing is the process of reducing a variable's possible types within a particular blocks of code. We can use conditions and JavaScript operators to check the actual type of a value.
 
 Using typeof
 
@@ -22,9 +22,9 @@ Example:
       return value * 10;
     }
 
-In this example, the parameter value can be either a string or a number. TypeScript checks its type using typeof.
+In this example, the parameters value can be either a string or a number. TypeScript checks its type using typeof.
 
-If the value is a string, it converts the text to uppercase. Otherwise, it multiplies the number by 10.
+If the value is a string, it convert the text to uppercase. Otherwise, it multiplies the number by 10.
 
 Using Type Guards
 
